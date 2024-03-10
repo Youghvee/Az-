@@ -51,7 +51,7 @@ class _SudoManager:
             return [self.owner]
         fsudos = fsudos.split()
         fsudos.append(self.owner)
-        return [int(_) for_ in fsudos]
+        return [int(_) for _ in fsudos]
 
     def is_sudo(self, id_):
         return bool(id_ in self.get_sudos())
