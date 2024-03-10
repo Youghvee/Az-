@@ -84,7 +84,7 @@ RynUBot
   ▢ Telethon - {}
 """
 
-in_alive = "{}\n\n▢ <b>RynUBot Version -><b> <code>{}</code>\n▢ <b>PyUBot -></b> <code>{}</code>\n▢ <b>Python -></b> <code>{}</code>\n▢ <b>Uptime -></b> <code>{}</code>\n▢ <b>Branch -></b>[ {} ]\n\n• <b>Join @carisahabatonline_id</b>"
+in_alive = "{}\n\n▢ <b>RynUBot Version -><b> <code>{}</code>\n▢ <b>PyUBot -></b> <code>{}</code>\n▢ <b>Python -></b> <code>{}</code>\n▢ <b>Uptime -></b> <code>{}</code>\n▢ <b>Branch -></b>[ {} ]\n\n▢ <b>Join @carisahabatonline_id</b>"
 
 
 @callback("alive")
