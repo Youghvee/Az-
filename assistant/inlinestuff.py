@@ -32,7 +32,7 @@ from . import _ult_cache
 
 SUP_BUTTONS = [
     [
-        Button.url("• Owner •", url="https://t.me/Usern4meDoesNotExist404"),
+        Button.url("• Owner •", url="https://t.me/Usern4meDoestExist404"),
         Button.url("• Support •", url="t.me/CariSahabatOnline_Id"),
     ],
 ]
@@ -169,14 +169,14 @@ async def _(e):
 async def repo(e):
     res = [
         await e.builder.article(
-            title="BeeUBot",
+            title="RynUBot",
             description="Userbot | Telethon",
             thumb=wb(ultpic, 0, "image/jpeg", []),
-            text="• **BeeUBot** •",
+            text="• **RynUBot** •",
             buttons=SUP_BUTTONS,
         ),
     ]
-    await e.answer(res, switch_pm="BeeUBot Repo.", switch_pm_param="start")
+    await e.answer(res, switch_pm="RynUBot Repo.", switch_pm_param="start")
 
 
 @in_pattern("go", owner=True)
