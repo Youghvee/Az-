@@ -71,7 +71,7 @@ async def inline_alive(o):
             text=MSG,
             include_media=True,
             buttons=SUP_BUTTONS,
-            title="Dante Ubot",
+            title="Ryn Ubot",
             description="Userbot | Telethon",
             url=TLINK,
             thumb=WEB0,
