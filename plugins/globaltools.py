@@ -100,7 +100,7 @@ async def _(e):
         return await e.eor(get_string("schdl_2"), time=5)
     user = await e.get_reply_message()
     if user:
-        ev = await e.eor("`Promoting Replied User Globally`")
+        ev = await e.eor("▢ **Promoting Replied User Globally**")
         ok = e.text.split()
         key = "all"
         if len(ok) > 1 and (("group" in ok[1]) or ("channel" in ok[1])):
@@ -159,7 +159,7 @@ async def _(e):
         k = e.text.split()
         if not k[1]:
             return await eor(
-                e, "`Give someone's username/id or replied to user.", time=5
+                e, "**Give someone's username/id or replied to user.**", time=5
             )
         user = k[1]
         if user.isdigit():
@@ -167,8 +167,8 @@ async def _(e):
         try:
             name = await e.client.get_entity(user)
         except BaseException:
-            return await e.eor(f"`No User Found Regarding {user}`", time=5)
-        ev = await e.eor(f"`Promoting {name.first_name} globally.`")
+            return await e.eor(f"**No User Found Regarding** `{user}`", time=5)
+        ev = await e.eor(f"**Promoting {name.first_name} globally.**")
         key = "all"
         if len(k) > 2 and (("group" in k[2]) or ("channel" in k[2])):
             key = k[2]
@@ -244,7 +244,7 @@ async def _(e):
         k = e.text.split()
         if not k[1]:
             return await eor(
-                e, "`Give someone's username/id or replied to user.", time=5
+                e, "**Give someone's username/id or replied to user.**", time=5
             )
         user = k[1]
         if user.isdigit():
@@ -252,8 +252,8 @@ async def _(e):
         try:
             name = await ultroid_bot.get_entity(user)
         except BaseException:
-            return await e.eor(f"`No User Found Regarding {user}`", time=5)
-        ev = await e.eor(f"`Demoting {name.first_name} globally.`")
+            return await e.eor(f"**No User Found Regarding** `{user}`", time=5)
+        ev = await e.eor(f"**Demoting {name.first_name} globally.**")
         key = "all"
         if len(k) > 2 and (("group" in k[2]) or ("channel" in k[2])):
             key = k[2]
@@ -287,7 +287,7 @@ async def _(e):
 
 @ultroid_cmd(pattern="ungban( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`UnGbanning...`")
+    xx = await e.eor("▢ **UnGbanning...**")
     match = e.pattern_match.group(1).strip()
     peer = None
     if e.reply_to_msg_id:
@@ -304,9 +304,9 @@ async def _(e):
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.eor("`Reply to some msg or add their id.`", time=5)
+        return await xx.eor("**Reply to some msg or add their id.**", time=5)
     if not is_gbanned(userid):
-        return await xx.edit("`User/Channel is not Gbanned...`")
+        return await xx.edit("**User/Channel is not Gbanned...**")
     try:
         if not peer:
             peer = await e.client.get_entity(userid)
@@ -345,13 +345,13 @@ async def _(e):
     if isinstance(peer, User):
         await e.client(UnblockRequest(userid))
     await xx.edit(
-        f"`Ungbaned` {name} in {chats} `chats.\nRemoved from gbanwatch.`",
+        f"▢ **Ungbaned** {name} in {chats} **chats.\nRemoved from gbanwatch.**",
     )
 
 
 @ultroid_cmd(pattern="gban( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`Gbanning...`")
+    xx = await e.eor("▢ **Gbanning...**")
     reason = ""
     if e.reply_to_msg_id:
         userid = (await e.get_reply_message()).sender_id
@@ -376,7 +376,7 @@ async def _(e):
         except IndexError:
             pass
     else:
-        return await xx.eor("`Reply to some msg or add their id.`", time=5)
+        return await xx.eor("**Reply to some msg or add their id.**", time=5)
     user = None
     try:
         user = await e.client.get_entity(userid)
@@ -386,13 +386,13 @@ async def _(e):
         name = str(userid)
     chats = 0
     if userid == ultroid_bot.uid:
-        return await xx.eor("`I can't gban myself.`", time=3)
+        return await xx.eor("▢ **I can't gban myself.**", time=3)
     elif userid in DEVLIST:
-        return await xx.eor("`I can't gban my Developers.`", time=3)
+        return await xx.eor("▢ **I can't gban my Developers.**", time=3)
     elif is_gbanned(userid):
         return await eod(
             xx,
-            "`User is already gbanned and added to gbanwatch.`",
+            "▢ **User is already gbanned and added to gbanwatch.**",
             time=4,
         )
     if e.client._dialogs:
@@ -444,10 +444,10 @@ async def gcast(event):
             msg, btn = get_msg_button(msg)
     else:
         return await eor(
-            event, "`Give some text to Globally Broadcast or reply a message..`"
+            event, "▢ **Give some text to Globally Broadcast or reply a message...**"
         )
 
-    kk = await event.eor("`Globally Broadcasting Msg...`")
+    kk = await event.eor("▢ **Kalo Lu Limit Jangan Salahin Ryn Ya Anjing...**")
     er = 0
     done = 0
     err = ""
@@ -530,9 +530,9 @@ async def gucast(event):
             msg, btn = get_msg_button(msg)
     else:
         return await eor(
-            event, "`Give some text to Globally Broadcast or reply a message..`"
+            event, "▢ **Give some text to Globally Broadcast or reply a message...**"
         )
-    kk = await event.eor("`Globally Broadcasting Msg...`")
+    kk = await event.eor("▢ **Kalo Lu Limit Jangan Salahin Ryn Ya Anjing...**")
     er = 0
     done = 0
     if event.client._dialogs:
@@ -575,13 +575,13 @@ async def gkick(e):
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.edit("`Reply to some msg or add their id.`", time=5)
+        return await xx.edit("**Reply to some msg or add their id.**", time=5)
     name = (await e.client.get_entity(userid)).first_name
     chats = 0
     if userid == ultroid_bot.uid:
-        return await xx.eor("`I can't gkick myself.`", time=3)
+        return await xx.eor("▢ **I can't gkick myself.**", time=3)
     if userid in DEVLIST:
-        return await xx.eor("`I can't gkick my Developers.`", time=3)
+        return await xx.eor("▢ **I can't gkick my Developers.**", time=3)
     if e.client._dialogs:
         dialog = e.client._dialogs
     else:
@@ -599,7 +599,7 @@ async def gkick(e):
 
 @ultroid_cmd(pattern="gmute( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`Gmuting...`")
+    xx = await e.eor("▢ **Gmuting...**")
     if e.reply_to_msg_id:
         userid = (await e.get_reply_message()).sender_id
     elif e.pattern_match.group(1).strip():
@@ -607,15 +607,15 @@ async def _(e):
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.eor("`Reply to some msg or add their id.`", tome=5, time=5)
+        return await xx.eor("**Reply to some msg or add their id.`", tome=5, time=5)
     name = await e.client.get_entity(userid)
     chats = 0
     if userid == ultroid_bot.uid:
-        return await xx.eor("`I can't gmute myself.`", time=3)
+        return await xx.eor("▢ **I can't gmute myself.**", time=3)
     if userid in DEVLIST:
-        return await xx.eor("`I can't gmute my Developers.`", time=3)
+        return await xx.eor("▢ **I can't gmute my Developers.**", time=3)
     if is_gmuted(userid):
-        return await xx.eor("`User is already gmuted.`", time=4)
+        return await xx.eor("▢ **User is already gmuted.**", time=4)
     if e.client._dialogs:
         dialog = e.client._dialogs
     else:
@@ -634,7 +634,7 @@ async def _(e):
 
 @ultroid_cmd(pattern="ungmute( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`UnGmuting...`")
+    xx = await e.eor("▢ **UnGmuting...**")
     if e.reply_to_msg_id:
         userid = (await e.get_reply_message()).sender_id
     elif e.pattern_match.group(1).strip():
