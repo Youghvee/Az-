@@ -50,7 +50,7 @@ def text_to_url(event):
 
 _buttons = {
     "otvars": {
-        "text": "Other Variables to set for @Usern4meDoesNotExist404:",
+        "text": "Other Variables to set for @Usern4meDoestExist404:",
         "buttons": [
             [
                 Button.inline("Tᴀɢ Lᴏɢɢᴇʀ", data="taglog"),
@@ -340,7 +340,7 @@ async def changes(okk):
             if len(tl_chnglog) > 700:
                 tl_chnglog = f"{tl_chnglog[:700]}..."
                 button.append([Button.inline("View Complete", "changesall")])
-            await okk.edit("• Writing Changelogs 📝 •")
+            await okk.edit("▢ **Writing Changelogs...**")
             img = await Carbon(
                 file_name="changelog",
                 code=tl_chnglog,
@@ -348,7 +348,7 @@ async def changes(okk):
                 language="md",
             )
             return await okk.edit(
-                f"**• Ultroid Userbot •**{cli}", file=img, buttons=button
+                f"**▢ Ryn Userbot**{cli}", file=img, buttons=button
             )
         except Exception as er:
             LOGS.exception(er)
