@@ -66,7 +66,7 @@ async def _(e):
             if "rec" in okk and not bb.bot and not bb.deleted:
                 xx += f"\n{inline_mention(bb)}"
         if isinstance(y, owner):
-            xx += f"\n꧁{inline_mention(bb)}꧂"
+            xx += f"\n▢{inline_mention(bb)}"
         if isinstance(y, admin) and "admin" in okk and not bb.deleted:
             xx += f"\n{inline_mention(bb)}"
         if "all" in okk and not bb.bot and not bb.deleted:
