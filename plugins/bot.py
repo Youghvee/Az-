@@ -12,7 +12,7 @@ __doc__ = get_help("help_bot")
 import os
 import sys
 import time
-from platform import python_version as pyver
+from platform import python_version as paver
 from random import choice
 
 from telethon import __version__
@@ -70,21 +70,21 @@ def ULTPIC():
 
 buttons = [
     [
-        Button.url(get_string("bot_3"), "https://t.me/MusicStreamSupport"),
-        Button.url(get_string("bot_4"), "https://t.me/MusicStreamSupport"),
+        Button.url(get_string("bot_3"), "https://t.me/SpotifySupportStream_Id"),
+        Button.url(get_string("bot_4"), "https://t.me/SpotifySupportStream_Id"),
     ]
 ]
 
 # Will move to strings
 alive_txt = """
-DanteUBot
+RynUBot
 
   ▢ Version - {}
-  ▢ DanteUBot - {}
+  ▢ RynUBot - {}
   ▢ Telethon - {}
 """
 
-in_alive = "{}\n\n▢ <b>DanteUBot Version -><b> <code>{}</code>\n▢ <b>PyUBot -></b> <code>{}</code>\n▢ <b>Python -></b> <code>{}</code>\n▢ <b>Uptime -></b> <code>{}</code>\n▢ <b>Branch -></b>[ {} ]\n\n• <b>Join @carisahabatonline_id</b>"
+in_alive = "{}\n\n▢ <b>RynUBot Version -><b> <code>{}</code>\n▢ <b>PyUBot -></b> <code>{}</code>\n▢ <b>Python -></b> <code>{}</code>\n▢ <b>Uptime -></b> <code>{}</code>\n▢ <b>Branch -></b>[ {} ]\n\n• <b>Join @carisahabatonline_id</b>"
 
 
 @callback("alive")
