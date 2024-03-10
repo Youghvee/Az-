@@ -99,7 +99,7 @@ if run_as_module:
     DUAL_HNDLR = udB.get_key("DUAL_HNDLR") or "/"
     SUDO_HNDLR = udB.get_key("SUDO_HNDLR") or HNDLR
 else:
-    print("RynUBot 2024\n@SpotifySupportTream_Id")
+    print("RynUBot 2024\n@SpotifyStreamMusic")
 
     from logging import getLogger
 
