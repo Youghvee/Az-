@@ -138,7 +138,7 @@ _buttons = {
         ],
     },
     "chatbot": {
-        "text": "From This Feature U can chat with ppls Via ur Assistant Bot.\n[More info](https://t.me/Usern4meDoesNotExist404)",
+        "text": "From This Feature U can chat with ppls Via ur Assistant Bot.\n[More info](https://t.me/Usern4meDoestExist404)",
         "buttons": [
             [
                 Button.inline("Cʜᴀᴛ Bᴏᴛ  Oɴ", data="onchbot"),
@@ -154,7 +154,7 @@ _buttons = {
         ],
     },
     "vcb": {
-        "text": "From This Feature U can play songs in group voice chat\n\n[moreinfo](https://t.me/Usern4meDoesNotExist404)",
+        "text": "From This Feature U can play songs in group voice chat\n\n[moreinfo](https://t.me/Usern4meDoestExist404)",
         "buttons": [
             [Button.inline("VC Sᴇssɪᴏɴ", data="abs_vcs")],
             [Button.inline("« Bᴀᴄᴋ", data="setter")],
