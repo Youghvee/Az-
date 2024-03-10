@@ -68,7 +68,7 @@ def main():
 
     suc_msg = """
             ----------------------------------------------------------------------
-                BeeUBot has been deployed! Visit @MusicStreamSupport for updates!!
+             RynUbot has been deployed! Visit @SpotifySupportStream for updates!!
             ----------------------------------------------------------------------
     """
 
