@@ -50,7 +50,7 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("Owners", url="https://t.me/Usern4meDoesNotExist404"),
+        Button.url("Owners", url="https://t.me/Usern4meDoestExist404"),
         Button.url("Support", url="t.me/carisahabatonline_id"),
     ],
 ]
@@ -60,10 +60,10 @@ SUP_BUTTONS = [
 
 @in_pattern(owner=True, func=lambda x: not x.text)
 async def inline_alive(o):
-    TLINK = inline_pic() or "https://mallucampaign.in/images/img_1701574887.jpg"
-    MSG = "• **Dante Ubot •**"
+    TLINK = inline_pic() or "https://mallucampaign.in/images/img_1710069782.jpg"
+    MSG = "▢ **Ryn Ubot**"
     WEB0 = InputWebDocument(
-        "https://mallucampaign.in/images/img_1701574887.jpg", 0, "image/jpg", []
+        "https://mallucampaign.in/images/img_1710069782.jpg", 0, "image/jpg", []
     )
     RES = [
         await o.builder.article(
@@ -82,7 +82,7 @@ async def inline_alive(o):
         RES,
         private=True,
         cache_time=300,
-        switch_pm="👥 DANTEUBOT PORTAL",
+        switch_pm="👥 RYNUBOT PORTAL",
         switch_pm_param="start",
     )
 
@@ -107,7 +107,7 @@ async def inline_handler(event):
         )
     else:
         result = await event.builder.article(
-            title="BeeUBot Bantuan Perintah", text=text, buttons=_main_help_menu
+            title="RynUBot Bantuan Perintah", text=text, buttons=_main_help_menu
         )
     await event.answer([result], private=True, cache_time=300, gallery=True)
 
@@ -398,9 +398,9 @@ async def ibuild(e):
                     results = [
                         await builder.document(
                             _pic,
-                            title="Dante Op",
+                            title="Ryn Op",
                             text=txt,
-                            description="@Usern4meDoesNotExist404",
+                            description="@Usern4meDoestExist404",
                             buttons=btn,
                             link_preview=False,
                         )
@@ -413,10 +413,10 @@ async def ibuild(e):
                     cont = InputWebDocument(pic, 0, mime_type, [])
                 results = [
                     await builder.article(
-                        title="Dante Op",
+                        title="Ryn Op",
                         type=_type,
                         text=txt,
-                        description="@MusicStreamSupport",
+                        description="@SpotifyStreamMusic",
                         include_media=include_media,
                         buttons=btn,
                         thumb=cont,
@@ -428,7 +428,7 @@ async def ibuild(e):
         except Exception as er:
             LOGS.exception(er)
     result = [
-        await builder.article("BeeUBot Op", text=txt, link_preview=False, buttons=btn)
+        await builder.article("RynUBot Op", text=txt, link_preview=False, buttons=btn)
     ]
     await e.answer(result)
 
