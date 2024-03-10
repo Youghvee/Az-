@@ -15,7 +15,7 @@ STRINGS = {
 • Here, are the Some Basic stuff from, where you can Know, about its Usage.""",
     2: """🎉** About RynUBot**
 
-🧿 BeeUBot is Pluggable and powerful Telethon Userbot, made in Python from Scratch. It is Aimed to Increase Security along with Addition of Other Useful Features.
+🧿 RynUBot is Pluggable and powerful Telethon Userbot, made in Python from Scratch. It is Aimed to Increase Security along with Addition of Other Useful Features.
 
 ❣ Made by **@Usern4meDoestExist404**""",
     3: """**💡• FAQs •**
