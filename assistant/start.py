@@ -68,7 +68,7 @@ async def own(event):
         mention=event.sender.mention, me=inline_mention(ultroid_bot.me)
     )
     if custom_info:
-        msg += "\n\n• Powered by **@Usern4meDoestExist404**"
+        msg += "\n\n▢ Powered by **@Usern4meDoestExist404**"
     await event.edit(
         msg,
         buttons=[Button.inline("Close", data="closeit")],
@@ -113,7 +113,7 @@ async def ultroid(event):
             if udB.get_key("PMBOT"):
                 ok = "You can contact my master using this bot!!\n\nSend your Message, I will Deliver it To Master."
             await event.reply(
-                f"Hey there {mention}, this is BeeUBot Assistant of {me}!\n\n{ok}",
+                f"Hey there {mention}, this is RynUBot Assistant of {me}!\n\n{ok}",
                 file=udB.get_key("STARTMEDIA"),
                 buttons=[Button.inline("Info.", data="ownerinfo")]
                 if Owner_info_msg
