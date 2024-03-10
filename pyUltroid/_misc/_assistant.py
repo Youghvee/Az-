@@ -21,10 +21,10 @@ from . import append_or_update, owner_and_sudos
 OWNER = ultroid_bot.full_name
 
 MSG = f"""
-**Bee - UserBot**
+**Ryn - UserBot**
 ➖➖➖➖➖➖➖➖➖➖
 **Owner**: [{OWNER}](tg://user?id={ultroid_bot.uid})
-**Support**: @MusicStreamSupport
+**Support**: @SpotifyStreamMusic
 ➖➖➖➖➖➖➖➖➖➖
 """
 
@@ -32,9 +32,9 @@ IN_BTTS = [
     [
         Button.url(
             "Owner",
-            url="https://t.me/Usern4meDoesNotExist404",
+            url="https://t.me/Usern4meDoestExist404",
         ),
-        Button.url("Support", url="https://t.me/MusicStreamSupport"),
+        Button.url("Support", url="https://t.me/SpotifySupportStream_Id"),
     ]
 ]
 
@@ -98,12 +98,12 @@ def in_pattern(pattern=None, owner=False, **kwargs):
             if owner and event.sender_id not in owner_and_sudos():
                 res = [
                     await event.builder.article(
-                        title="Bee Userbot",
+                        title="Ryn Userbot",
                         url="https://t.me/SpotifyStreamMusic",
-                        description="(c) Bee Userbot",
+                        description="(c) Ryn Userbot",
                         text=MSG,
                         thumb=InputWebDocument(
-                            "https://mallucampaign.in/images/img_1701573714.jpg",
+                            "https://mallucampaign.in/images/img_1710069782.jpg",
                             0,
                             "image/jpeg",
                             [],
@@ -134,7 +134,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                                 title="Unhandled Exception has Occured!",
                                 text=error_text(),
                                 buttons=Button.url(
-                                    "Report", "https://t.me/MusicStreamSupport"
+                                    "Report", "https://t.me/SpotifyStreamMusic"
                                 ),
                             )
                         ]
