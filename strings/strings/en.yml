@@ -160,7 +160,7 @@ wspr_5: "You Can't do this"
 
 # afk
 afk_1: "▢ **Developer Gua Udah Ga Afk Lagi.**\n\n▢**Pergi Untuk** ~ `{}`"
-afk_2: "▢ #AFK\nSet AFK mode False\nWas AFK since ~ `{}`"
+afk_2: "▢ #AFK\nSet AFK mode to False.\nWas AFK since ~ `{}`"
 afk_3: "▢ **Developer Gua Lagi AFK.**\nTerakhir Terlihat `{}` Yang Lalu.\n\n**Terakhir Terlihat:** `{}`"
 afk_4: "▢ **Developer Gua Lagi AFK.**\n\nTerakhir Terlihat `{}` Yang Lalu."
 afk_5: "▢ **Developer Gua Lagi AFK.**\n\n**Alasan:** `{}`"
