@@ -194,7 +194,7 @@ async def _(e):
     else:
         return await xx.eor(get_string("tban_1"), time=3)
     if userid == ultroid_bot.uid:
-        return await xx.eor("**Lu Developer Gua Anjing Gua Ga Bisa Mute Lu Goblok.**"", time=3)
+        return await xx.eor("**Lu Developer Gua Anjing Gua Ga Bisa Mute Lu Goblok.**", time=3)
     try:
         await e.client.edit_permissions(
             chat.id,
